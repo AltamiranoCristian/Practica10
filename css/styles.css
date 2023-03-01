@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: rgb(44, 36, 100);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100
+}
+
+h1{
+    float: left;
+    margin-top: 5px;
+    color: white;
+    font-size: 30px
+}
+
+.logo{
+    float: left;
+    margin-right: 5px;
+    cursor: pointer
+}
+
+header label{
+    float: right;
+    font-size: 8px;
+    margin: 5px;
+    cursor: pointer
+}
+
+#barramenu{
+    display: none
+}
+
+header .contenedor{
+    display: table
+}
+
+.menu{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(44, 36, 100, 0.58);
+    top: 50px;
+    transform: translateX(-100%);
+    transition: all 0.5s
+}
+
+.menu a{
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid rgba(239, 237, 244, 0.4)
+}
+
+.menu a:hover{
+    background: rgba(255,255,255,0.2)
+}
+
+#barramenu:checked ~ .menu {
+    transform: translateX(0%)
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*diseño de banner*/
+
+#banner{
+    margin-top:50px;
+    position: relative;
+}
+
+
+
+#banner img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5)
+}
+
+#banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white
+}
+
+#banner h2{
+    font-size: 30px;
+    color: white
+}
+
+#banner p{
+    padding: 10px;
+    margin: 10px
+}
+
+#banner a{
+    display: block;
+    width: 100px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #fff
+}
+
+#banner a:hover{
+    background: rgba(255, 255, 255, 0.33)
+}
+
+/*diseño de articulos*/
+section{
+    width: 100%;
+    margin-bottom: 25px
+}
+
+#bd{
+    text-align: center;
+}
+
+#cuerpo{
+    margin: 10px;
+}
+#cuerpo .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+#cuerpo article{
+    margin: 30px
+}
+
+#cuerpo img{
+    width: 100%;
+    max-width: 300px;
+    height: 80%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    border-radius: 15px;
+    cursor: pointer
+}
+
+#cuerpo img:hover{
+    transform: scale(1.025);
+}
+
+#cuerpo h2, h4, p{
+    text-align: center;
+}
+
+/*Estilos contenido v2*/
+#content{
+    background: #48484d;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+#content .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+#content h2{
+    text-align: center;
+    padding: 5px
+}
+
+#content p{
+    padding: 5px
+}
+
+/*diseño datos*/
+
+#datos img{
+    width: 100%;
+    max-width: 300px
+}
+
+#datos .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+#datos h2{
+    text-align: center
+}
+
+#datos article{
+    margin: 20px
+} 
+
+/*estilos para informasao xdxd*/
+
+#info{
+
+    background: #262648;
+    color: white;
+    text-align: center;
+    padding: 50px
+}
+
+.info-dev{
+    margin: 30px 100px
+}
+
+#info .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-dev img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid #fff
+}
+
+.info-dev img:hover{
+    transform: scale(1.054);
+}
+
+/*Estilos footah*/
+
+footer{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    float: right
+}
+
+.copy{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    padding: 5px;
+}
+
+/*Responsive*/
+@media (min-width:1024px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex
+    }
+    
+    .menu a{
+        border: none
+    }
+    
+    header label{
+        display: none
+    }
+}
+
+@media (min-width:1024px){
+    .contenedor{
+        width: 1200px
+    }
+}
+
+@media(min-width:480px){
+    #banner h2{
+        font-size: 20px
+    }
+}
+
+@media(min-width:480px){
+    #banner {
+        height: 300px;
+        overflow: hidden
+    }
+    
+    #banner img {
+        height: auto;
+        margin-top: -50px
+    }
+    
+}
+
+@media(min-width:1024px){
+    #banner img {
+        height: auto;
+        margin-top: -200px
+    }
+    
+    #banner h2{
+        font-size: 50px
+    }
+}
+
+@media (min-width:1024px){
+    .info-dev{
+        width: auto;
+        margin: auto
+    }
+}
